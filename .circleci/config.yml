@@ -15,7 +15,7 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      -run
+      -run:
         name: Set env variables
         command: echo 'export VERSION=$(echo $CIRCLE_SHA1 | cut -c -7)' >> $BASH_ENV
       -run:
